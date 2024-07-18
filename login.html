@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login using javascript</title>
+</head>
+<body>
+   <h1> this is login page </h1>
+   username: <input type="text" id="user" placeholder="username"> <br>
+   password: <input type="password" id="pas" placeholder="password"> <br>
+   <button onclick="mylogin()">login</button>
+   <p id="result"></p>
+  <script>
+      function mylogin(){
+
+          var user=document.getElementById("user").value;
+          var password=document.getElementById("pas").value;
+          console.log(user,password);// used for printong in console
+          if(user == "keerthan" && password=="keerthan0102")
+            {
+             document.getElementById("result").innerHTML="successfully...";
+             }
+          else{
+             document.getElementById("result").innerHTML="fail...";
+             }
+      }
+  </script>
+</body>
+</html>
