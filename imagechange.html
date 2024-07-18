@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <h1>welcome to javascript</h1>
-    <p id="demo"></p>
-    <button type="button" onclick="document.getElementById('demo').innerHTML='welcom to javascrip'">click me</button>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<img id="myImage" src="logo.jpg" style="width:100px">
+
+<!-- By using the method below, we don't need to write a separate function for each button -->
+<!--
+<button onclick="myclick()">clickme</button>
+<button onclick="myclick1()">click2</button>
+-->
+<button onclick="myclick('coffeplant.jpg')">clickme</button>
+<button onclick="myclick('girlcoffe.jpg')">click2</button>
+
+<script>
+    /* Instead of defining separate functions for each button,
+       we can use a single function and pass the image source as a parameter
+       function myclick(){
+        document.getElementById("myImage").src='coffeplant.jpg';
+                }
+        function myclick1(){
+          document.getElementById("myImage").src='girlcoffe.jpg';
+                         }
+      */
+    function myclick(image) {
+        document.getElementById("myImage").src = image;
+    }
+</script>
+
 </body>
 </html>
