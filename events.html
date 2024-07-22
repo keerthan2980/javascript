@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> event listiner</h1>
+    <p id="p">Counter::<span id="c">0</span></p>
+    <button id="increase">INCREASE"</button>
+    <button id="descrease">DECREASE</button>
+    <!--for 2nd event-->
+    <button id="print">Print</button>
+    <p id="h"></p>
+    <script>
+        const counter=document.getElementById("c");
+        const increase=document.getElementById("increase");
+        const descrease=document.getElementById("descrease");
+        let count=0;
+        increase.addEventListener("click",function(){
+            count++;
+            counter.innerHTML=count;
+        })
+        descrease.addEventListener("click",function(){
+            count--;
+            counter.innerHTML=count;
+        })
+        //2nd event
+        let count2=0
+        const p=document.getElementById("print");
+        p.addEventListener("click",function(){
+            count2++;
+            const printword="welcome".repeat(count2).trim();
+            document.getElementById("h").innerHTML=`${printword}:: u have clicked :::${count2}`;
+        })
+       
+    </script>
+
+</body>
+</html>
