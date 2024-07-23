@@ -1,0 +1,11 @@
+cd .\typescript\
+npm install -D typescript
+npx tsc filename.ts
+node filename.js
+
+command prompt // vs code terminal
+cd filename
+dir
+npm i -D typescript
+npx tsc filename.ts
+node filename.js 
